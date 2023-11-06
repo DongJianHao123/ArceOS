@@ -9,12 +9,12 @@
 
     {% block head %}{% endblock head %}
 
-    <title>{% block title %}{% endblock title %} - Rust Edu</title>
+    <title>{% block title %}{% endblock title %} - ArceOS</title>
 </head>
 
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
+        <!-- <div class="navbar-brand">
             <a class="navbar-item" href="{{ config.base_url }}">
                 <img class="navbar-logo" src="{{ get_url(path='rust-edu-banner.svg')}}" alt="Rust Edu Logo" />
                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -23,8 +23,8 @@
                     <span aria-hidden="true"></span>
                 </a>
             </a>
-        </div>
-        <div class="navbar-menu" id="navMenu">
+        </div> -->
+        <!-- <div class="navbar-menu" id="navMenu">
             <div class="navbar-end has-text-centered">
                 {% for item in config.extra.navbar %}
                 <a class="navbar-item has-text-weight-semibold" href="{{ item.url | replace(from='$BASE_URL', to=config.base_url) }}">
@@ -32,7 +32,7 @@
                 </a>
                 {% endfor %}
             </div>
-        </div>
+        </div> -->
     </nav>
 
     <div class="main-content columns is-fluid">

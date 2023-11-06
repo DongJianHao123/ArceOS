@@ -6,6 +6,8 @@
 
 @import "../ext/bulma/bulma.sass";
 @import "../ext/bulmaswatch/lumen/_overrides.scss";
+@import "../sass/home.scss";
+@import "../sass/base.scss";
 
 body {
     display: flex;
@@ -22,7 +24,7 @@ p {
 }
 
 a:hover {
-    text-decoration: underline;
+    // text-decoration: underline;
 }
 
 .navbar {

@@ -1,0 +1,20 @@
+.home-menus {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 0;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+
+    .menu-item {
+        color: #000;
+        font-size: 18px;
+
+    }
+}
+.index-container{
+    width: 100%;
+    padding:0 5vw;
+}

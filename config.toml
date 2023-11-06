@@ -11,7 +11,7 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-title = "Rust Edu"
+title = "ArceOS"
 description = ""
 
 minify_html = false
@@ -25,7 +25,17 @@ navbar = [
   { name = "Resources", url = "/resources" },
 ]
 
+menus = [
+  { label = "设计目标", path = '#' },
+  { label = "现有功能", path = '#' },
+  { label = "整体架构", path = '#' },
+  { label = "组件设计", path = '#' },
+  { label = "代码统计", path = '#' },
+  { label = "功能演示", path = '#' },
+  { label = "最新进展", path = '#' },
+]
+
 external = [
   { name = "Rust Language Website", url = "https://rust-lang.org" },
-  { name = "Official Rust Book", url = "https://doc.rust-lang.org/book/" }
+  { name = "Official Rust Book", url = "https://doc.rust-lang.org/book/" },
 ]
