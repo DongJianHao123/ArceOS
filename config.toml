@@ -26,13 +26,13 @@ navbar = [
 ]
 
 menus = [
-  { label = "设计目标", path = '#' },
-  { label = "现有功能", path = '#' },
-  { label = "整体架构", path = '#' },
-  { label = "组件设计", path = '#' },
-  { label = "代码统计", path = '#' },
-  { label = "功能演示", path = '#' },
-  { label = "最新进展", path = '#' },
+  { label = "设计目标", path = '#nav1' },
+  { label = "现有功能", path = '#nav2' },
+  { label = "整体架构", path = '#nav3' },
+  { label = "组件设计", path = '#nav4' },
+  { label = "代码统计", path = '#nav5' },
+  { label = "功能演示", path = '#nav6' },
+  { label = "最新进展", path = '#nav7' },
 ]
 
 external = [

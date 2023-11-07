@@ -1,3 +1,12 @@
+function scrollTo(offsetTop) {
+    const parent = document.querySelector('html')
+    console.log(parent);
+    parent.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+    })
+}
+
 function documentReady() {
     // https://bulma.io/documentation/components/navbar/#navbar-menu
 
@@ -9,7 +18,6 @@ function documentReady() {
         // Add a click event on each of them
         $navbarBurgers.forEach(el => {
             el.addEventListener('click', () => {
-
                 // Get the target from the "data-target" attribute
                 const target = el.dataset.target;
                 const $target = document.getElementById(target);
@@ -19,6 +27,19 @@ function documentReady() {
                 $target.classList.toggle('is-active');
             });
         });
+    }
+
+    const $menu_items = document.querySelectorAll('.menu-item')
+    if ($menu_items.length > 0) {
+        $menu_items.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault()
+                console.log(item.hash);
+                let targetEl = document.querySelector(item.hash);
+                console.log(targetEl);
+                scrollTo(targetEl.offsetTop)
+            })
+        })
     }
 }
 
@@ -30,3 +51,32 @@ if (document.readyState === 'loading') {
     // `DOMContentLoaded` has already fired
     documentReady();
 }
+const titleIndentation = {
+    H1: 1,
+    H2: 2,
+    H3: 3,
+    H4: 4,
+    H5: 5,
+    H6: 7,
+}
+function traverse(node) {
+    if (node.nodeType === Node.ELEMENT_NODE) {
+        // 处理当前节点
+        if (titleIndentation[node.tagName]) {
+            node.style.marginLeft = titleIndentation[node.tagName] + 'em'
+        } else if (node.previousElementSibling && titleIndentation[node.previousElementSibling.tagName]) {
+            node.style.marginLeft = titleIndentation[node.previousElementSibling.tagName] + 3 + 'em';
+        }else if(node.previousElementSibling && !titleIndentation[node.previousElementSibling.tagName]){
+            node.style.marginLeft = node.previousElementSibling.style.marginLeft;
+
+        }
+
+        // 遍历子节点
+        for (let i = 0; i < node.childNodes.length; i++) {
+            traverse(node.childNodes[i]);
+        }
+    }
+}
+
+// 从根节点开始遍历整个 DOM 树
+traverse(document.documentElement);
