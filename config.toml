@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://dongjianhao123.github.io/rust-edu/"
+base_url = "https://dongjianhao123.github.io/ArceOS/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -17,13 +17,13 @@ description = ""
 minify_html = false
 
 [extra]
-githubUrl = "https://github.com/DongJianHao123/rust-edu"
+githubUrl = "https://github.com/DongJianHao123/ArceOS"
 navbar = [
   # { name = "Home", url = "/" },
   # { name = "News", url = "/news" },
   # { name = "Zulip", url = "https://zulip.rust-edu.org" },
   # { name = "Resources", url = "/resources" },
-  { name = "Github", url = "https://github.com/DongJianHao123/rust-edu" },
+  { name = "Github", url = "https://github.com/DongJianHao123/ArceOS" },
 ]
 
 menus = [
