@@ -17,12 +17,13 @@ description = ""
 minify_html = false
 
 [extra]
-
+githubUrl = "https://github.com/DongJianHao123/rust-edu"
 navbar = [
-  { name = "Home", url = "/" },
-  { name = "News", url = "/news" },
-  { name = "Zulip", url = "https://zulip.rust-edu.org" },
-  { name = "Resources", url = "/resources" },
+  # { name = "Home", url = "/" },
+  # { name = "News", url = "/news" },
+  # { name = "Zulip", url = "https://zulip.rust-edu.org" },
+  # { name = "Resources", url = "/resources" },
+  { name = "Github", url = "https://github.com/DongJianHao123/rust-edu" },
 ]
 
 menus = [
@@ -38,4 +39,15 @@ menus = [
 external = [
   { name = "Rust Language Website", url = "https://rust-lang.org" },
   { name = "Official Rust Book", url = "https://doc.rust-lang.org/book/" },
+]
+
+footers=[
+  {label="服务",path='/#'},
+  {label="技术支持",path='/#'},
+  {label="问答",path='/#'},
+  {label="联系我们",path='/#'},
+  {label="返回顶部",path='/#'},
+  {label="关于Chenlong OS",path='/#'},
+  {label="隐私政策",path='/#'},
+  {label="网站地图",path='/#'}
 ]

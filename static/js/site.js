@@ -11,32 +11,30 @@ function documentReady() {
     // https://bulma.io/documentation/components/navbar/#navbar-menu
 
     // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    // const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
     // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
+    // if ($navbarBurgers.length > 0) {
+    //     // Add a click event on each of them
+    //     $navbarBurgers.forEach(el => {
+    //         el.addEventListener('click', () => {
+    //             // Get the target from the "data-target" attribute
+    //             const target = el.dataset.target;
+    //             const $target = document.getElementById(target);
 
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-            });
-        });
-    }
+    //             // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    //             el.classList.toggle('is-active');
+    //             $target.classList.toggle('is-active');
+    //         });
+    //     });
+    // }
 
     const $menu_items = document.querySelectorAll('.menu-item')
     if ($menu_items.length > 0) {
         $menu_items.forEach((item) => {
             item.addEventListener('click', (e) => {
                 e.preventDefault()
-                console.log(item.hash);
                 let targetEl = document.querySelector(item.hash);
-                console.log(targetEl);
                 scrollTo(targetEl.offsetTop)
             })
         })
@@ -79,4 +77,4 @@ function traverse(node) {
 }
 
 // 从根节点开始遍历整个 DOM 树
-traverse(document.documentElement);
+traverse(document.querySelector('#main-content'));
