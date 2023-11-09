@@ -41,13 +41,11 @@ external = [
   { name = "Official Rust Book", url = "https://doc.rust-lang.org/book/" },
 ]
 
-footers=[
-  {label="服务",path='/#'},
-  {label="技术支持",path='/#'},
-  {label="问答",path='/#'},
-  {label="联系我们",path='/#'},
-  {label="返回顶部",path='/#'},
-  {label="关于Chenlong OS",path='/#'},
-  {label="隐私政策",path='/#'},
-  {label="网站地图",path='/#'}
+footers = [
+  { label = "组织主页", path = 'https://github.com/arceos-org/' },
+  { label = "技术文档", path = 'https://rcore-os.cn/arceos-tutorial-book/' },
+  { label = "问答论坛", path = 'https://qa.arceos.cn/' },
+  { label = "辰龙发行版", path = 'https://chenlongos.com/' },
+  { label = "项目仓库", path = 'https://github.com/arceos-org/arceos' },
+  { label = "联系我们", path = 'mailto:hello@arceos.cn' },
 ]

@@ -75,21 +75,21 @@ title = "ArceOS"
 <div id='nav7' class='contnt-block'>
 
 ## ArceOS 未来⼯作
-> #### 正在进行的工作
->- 硬件：树莓派 4B
->- 调度算法：多核多队列/实时调度
->- 内存分配算法：mimalloc/TLSF
->- ⽹络栈：lwip
->- ⽂件系统：ext2/ext3
->- ⽤户库：Rust std 移植
->- ⽀持复杂应⽤：Redis
->- 异步 I/O
+#### 正在进行的工作
+- 硬件：树莓派 4B
+- 调度算法：多核多队列/实时调度
+- 内存分配算法：mimalloc/TLSF
+- ⽹络栈：lwip
+- ⽂件系统：ext2/ext3
+- ⽤户库：Rust std 移植
+- ⽀持复杂应⽤：Redis
+- 异步 I/O
 
-> #### 计划实现的功能
->- 硬件：更多 RISC-V/ARM 开发版
->- 真实驱动：e1000/ixgbe ⽹卡
->- 多种内核形态：宏内核/微内核
->- 系统兼容层：兼容 Linux ABI
->- ⽀持复杂应⽤：NGINX/tokio
+ #### 计划实现的功能
+- 硬件：更多 RISC-V/ARM 开发版
+- 真实驱动：e1000/ixgbe ⽹卡
+- 多种内核形态：宏内核/微内核
+- 系统兼容层：兼容 Linux ABI
+- ⽀持复杂应⽤：NGINX/tokio
 </div>
 </div>

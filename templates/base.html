@@ -72,7 +72,7 @@
             <div class="title">ArceOS </div>
             <ul class="footer-links">
                 {% for link in config.extra.footers %}
-                <li>{{link.label}}</li>
+                <li><a href={{link.path}}>{{link.label}}</a></li>
                 {% endfor %}
             </ul>
         </div>

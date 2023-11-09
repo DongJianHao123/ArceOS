@@ -11,23 +11,23 @@ function documentReady() {
     // https://bulma.io/documentation/components/navbar/#navbar-menu
 
     // Get all "navbar-burger" elements
-    // const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
     // Check if there are any navbar burgers
-    // if ($navbarBurgers.length > 0) {
-    //     // Add a click event on each of them
-    //     $navbarBurgers.forEach(el => {
-    //         el.addEventListener('click', () => {
-    //             // Get the target from the "data-target" attribute
-    //             const target = el.dataset.target;
-    //             const $target = document.getElementById(target);
+    if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
 
-    //             // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    //             el.classList.toggle('is-active');
-    //             $target.classList.toggle('is-active');
-    //         });
-    //     });
-    // }
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+            });
+        });
+    }
 
     const $menu_items = document.querySelectorAll('.menu-item')
     if ($menu_items.length > 0) {
@@ -64,7 +64,7 @@ function traverse(node) {
             node.style.marginLeft = titleIndentation[node.tagName] + 'em'
         } else if (node.previousElementSibling && titleIndentation[node.previousElementSibling.tagName]) {
             node.style.marginLeft = titleIndentation[node.previousElementSibling.tagName] + 3 + 'em';
-        }else if(node.previousElementSibling && !titleIndentation[node.previousElementSibling.tagName]){
+        } else if (node.previousElementSibling && !titleIndentation[node.previousElementSibling.tagName]) {
             node.style.marginLeft = node.previousElementSibling.style.marginLeft;
 
         }
@@ -76,5 +76,9 @@ function traverse(node) {
     }
 }
 
+const userAgent = window.navigator.userAgent;
+const screenWidth = window.innerHeight || document.documentElement.clientWidth || document.body.clientWidth
+const isMobile = /Mobile/i.test(userAgent) || screenWidth < 768
+const isTablet = /Tablet/i.test(userAgent) || (screenWidth >= 768 && screenWidth < 1024);
 // 从根节点开始遍历整个 DOM 树
-traverse(document.querySelector('#main-content'));
+if (!isMobile) traverse(document.querySelector('#main-content'));
