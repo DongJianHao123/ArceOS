@@ -7,6 +7,15 @@ function scrollTo(offsetTop) {
     })
 }
 
+function isWeixinBrowser() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf("micromessenger") != -1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function documentReady() {
     // https://bulma.io/documentation/components/navbar/#navbar-menu
 
@@ -35,7 +44,12 @@ function documentReady() {
             item.addEventListener('click', (e) => {
                 e.preventDefault()
                 let targetEl = document.querySelector(item.hash);
-                scrollTo(targetEl.offsetTop)
+                if (isWeixinBrowser()) {
+                    document.querySelector('html').scrollTop = targetEl.offsetTop
+                } else {
+                    scrollTo(targetEl.offsetTop)
+                }
+
             })
         })
     }
@@ -66,7 +80,6 @@ function traverse(node) {
             node.style.marginLeft = titleIndentation[node.previousElementSibling.tagName] + 3 + 'em';
         } else if (node.previousElementSibling && !titleIndentation[node.previousElementSibling.tagName]) {
             node.style.marginLeft = node.previousElementSibling.style.marginLeft;
-
         }
 
         // 遍历子节点
