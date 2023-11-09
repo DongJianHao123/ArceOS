@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/</loc>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/news/</loc>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/news/announcement/</loc>
+        <lastmod>2022-07-11</lastmod>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/resources/</loc>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/workshop/</loc>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/workshop/cfp-2022/</loc>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/workshop/code-of-conduct/</loc>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/workshop/paper-format-latex/</loc>
+    </url>
+    <url>
+        <loc>https://dongjianhao123.github.io/ArceOS/zulip/</loc>
+    </url>
+</urlset>
